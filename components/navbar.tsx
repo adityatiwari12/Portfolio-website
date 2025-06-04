@@ -1,17 +1,15 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Download, FileText, Moon, Sun } from "lucide-react"
+import { Menu, X, Download, FileText } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { useTheme } from "@/components/theme-provider"
 import ResumePreviewModal from "./resume-preview-modal"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false)
-  const { theme, setTheme } = useTheme()
 
   // Direct download link for Google Drive file
   const resumeDownloadUrl = "https://drive.google.com/uc?export=download&id=1uVHFS_uwAdEtPMGBr2myxVGH-f29HKn3"
@@ -82,31 +80,13 @@ export default function Navbar() {
                 <FileText className="h-4 w-4 mr-2" />
                 View CV
               </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                aria-label="Toggle theme"
-              >
-                {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-              </Button>
             </div>
           </nav>
 
           {/* Mobile Navigation Toggle */}
-          <div className="flex items-center gap-2 md:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-            </Button>
-            <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? <X /> : <Menu />}
-            </Button>
-          </div>
+          <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X /> : <Menu />}
+          </Button>
         </div>
       </div>
 
