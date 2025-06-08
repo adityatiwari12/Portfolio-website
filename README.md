@@ -1,30 +1,87 @@
-# Modern Portfolio
+# 🌐 Aditya Tiwari – Personal Portfolio Website
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+🚀 **Live Now:** [https://adityatiwariportfolio.vercel.app/](https://aditytiwariportfolio.vercel.app/)
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/adityatiwari12s-projects/v0-modern-portfolio)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/Yue0QgwYQHc)
+![Portfolio Screenshot](./Screenshot%202025-06-08%20155802.png)
 
-## Overview
+---
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## 🧠 About the Website
 
-## Deployment
+This isn’t just a collection of HTML, CSS, and React code —  
+It’s a **digital reflection** of who I am: a **Computer Science student**, an **AI enthusiast**, and someone deeply committed to **technology, innovation, and purpose**.
 
-Your project is live at:
+---
 
-**[https://vercel.com/adityatiwari12s-projects/v0-modern-portfolio](https://vercel.com/adityatiwari12s-projects/v0-modern-portfolio)**
+## 🛠 Tech Stack
 
-## Build your app
+- **Frontend:** React.js + Tailwind CSS  
+- **Hosting:** Vercel  
+- **Design:** Minimal, clean, and fully dark-themed (because... dark mode supremacy 🌒)  
+- **Responsive:** Mobile-first, blazing fast, and pixel-perfect
 
-Continue building your app on:
+---
 
-**[https://v0.dev/chat/projects/Yue0QgwYQHc](https://v0.dev/chat/projects/Yue0QgwYQHc)**
+## 🔍 What's Inside?
 
-## How It Works
+- ✨ **Projects Showcase**  
+  Featuring everything from AI + OpenCV integrations to beautiful MDI applications with custom UI components.
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+- 🌱 **About Me & My Work**  
+  My journey, my learning, and how I’m growing in the tech world.
+
+- 🤝 **Leadership & Community Roles**  
+  Rotaract, IEEE, GeeksforGeeks, and other impactful contributions.
+
+- 🧾 **Resume & Contact**  
+  Easy access to my CV and contact links for collaborations or opportunities.
+
+---
+
+## 💡 Why This Matters
+
+I believe every individual in tech deserves a **digital home** —  
+A place not just to showcase *what they’ve done*, but to express *who they are becoming*.
+
+This website is my way of being intentional about my growth, impact, and the communities I’m part of.
+
+---
+
+## 🫱🏻‍🫲🏻 A Word to Fellow Students
+
+> Don’t wait for perfection.  
+> Build, iterate, ship.  
+> You’ll learn more from launching something live than from any tutorial.
+
+---
+
+## 📬 Feedback Welcome
+
+I'm constantly improving — and your feedback helps!
+
+Whether it's UI suggestions, accessibility tips, performance insights, or just a vibe check —  
+**[Open an Issue](https://github.com/your-username/your-repo-name/issues)** or connect with me on [LinkedIn](https://www.linkedin.com/in/aditya-tiwari).
+
+---
+
+## 📷 Screenshots
+
+> Feel the vibe 🌌
+
+| Hero Section |
+|--------------|
+| ![Hero](./Screenshot%202025-06-08%20155802.png) |
+
+_Add more sections/screens if needed._
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**. Feel free to fork, modify, and build on it — with credit.
+
+---
+
+**Made with ❤️ by Aditya Tiwari**
+
+> [adityatiwariportfolio.vercel.app](https://adityatiwariportfolio.vercel.app/)
