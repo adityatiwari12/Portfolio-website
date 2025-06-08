@@ -72,7 +72,21 @@ Whether it's UI suggestions, accessibility tips, performance insights, or just a
 |--------------|
 | ![Hero](./Screenshot%202025-06-08%20155802.png) |
 
-_Add more sections/screens if needed._
+| Resume Preview |
+|--------------|
+| ![Resume](./Screenshot%2025-06-08%160642.png) |
+
+| Tech Stack |
+|--------------|
+| ![Tech Stack](./Screenshot%2025-06-08%160551.png) |
+
+| Light Mode |
+|--------------|
+| ![Light Mode](./Screenshot%2025-06-08%160704.png) |
+
+| Contact |
+|--------------|
+| ![Contact](./Screenshot%2025-06-08%160629.png) |
 
 ---
 
