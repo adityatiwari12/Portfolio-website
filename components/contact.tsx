@@ -9,46 +9,58 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/ui/use-toast"
-import { Mail, MapPin, Phone, Github, Linkedin, Twitter } from "lucide-react"
+import { submitContactForm } from "@/app/actions/contact"
+import { Mail, MapPin, Phone, Github, Linkedin, Twitter, Send, Loader2, AlertCircle } from "lucide-react"
+import { Alert, AlertDescription } from "@/components/ui/alert"
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [formError, setFormError] = useState<string | null>(null)
+  const [formSuccess, setFormSuccess] = useState<string | null>(null)
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   }
 
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+  const handleSubmit = async (formData: FormData) => {
     setIsSubmitting(true)
+    setFormError(null)
+    setFormSuccess(null)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const result = await submitContactForm(formData)
 
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    })
+      if (result.success) {
+        setFormSuccess(result.message)
+        toast({
+          title: "Message sent!",
+          description: result.message,
+        })
 
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    })
-    setIsSubmitting(false)
+        // Reset form
+        const form = document.getElementById("contact-form") as HTMLFormElement
+        if (form) {
+          form.reset()
+        }
+      } else {
+        setFormError(result.error)
+        toast({
+          title: "Error",
+          description: result.error,
+          variant: "destructive",
+        })
+      }
+    } catch (error) {
+      setFormError("An unexpected error occurred. Please try again.")
+      toast({
+        title: "Error",
+        description: "An unexpected error occurred. Please try again.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const contactInfo = [
@@ -101,57 +113,80 @@ export default function Contact() {
           >
             <Card>
               <CardContent className="p-6">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                {formError && (
+                  <Alert variant="destructive" className="mb-6">
+                    <AlertCircle className="h-4 w-4" />
+                    <AlertDescription>{formError}</AlertDescription>
+                  </Alert>
+                )}
+
+                {formSuccess && (
+                  <Alert className="mb-6 bg-green-50 text-green-800 dark:bg-green-900/20 dark:text-green-400">
+                    <AlertDescription>{formSuccess}</AlertDescription>
+                  </Alert>
+                )}
+
+                <form id="contact-form" action={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Your Name</Label>
+                      <Label htmlFor="name">Your Name *</Label>
                       <Input
                         id="name"
                         name="name"
                         placeholder="John Doe"
-                        value={formData.name}
-                        onChange={handleChange}
                         required
+                        disabled={isSubmitting}
+                        aria-describedby="name-error"
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">Your Email</Label>
+                      <Label htmlFor="email">Your Email *</Label>
                       <Input
                         id="email"
                         name="email"
                         type="email"
                         placeholder="john@example.com"
-                        value={formData.email}
-                        onChange={handleChange}
                         required
+                        disabled={isSubmitting}
+                        aria-describedby="email-error"
                       />
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="subject">Subject</Label>
+                    <Label htmlFor="subject">Subject *</Label>
                     <Input
                       id="subject"
                       name="subject"
                       placeholder="Project Inquiry"
-                      value={formData.subject}
-                      onChange={handleChange}
                       required
+                      disabled={isSubmitting}
+                      aria-describedby="subject-error"
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="message">Message *</Label>
                     <Textarea
                       id="message"
                       name="message"
                       placeholder="I'd like to discuss a project..."
                       rows={6}
-                      value={formData.message}
-                      onChange={handleChange}
                       required
+                      disabled={isSubmitting}
+                      aria-describedby="message-error"
                     />
                   </div>
                   <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={isSubmitting}>
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="h-4 w-4 mr-2" />
+                        Send Message
+                      </>
+                    )}
                   </Button>
                 </form>
               </CardContent>
