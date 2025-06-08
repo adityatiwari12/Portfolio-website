@@ -74,19 +74,19 @@ Whether it's UI suggestions, accessibility tips, performance insights, or just a
 
 | Resume Preview |
 |--------------|
-| ![Resume](./Screenshot%2025-06-08%160642.png) |
+| ![Resume](Screenshot%202025-06-08%20160642.png) |
 
 | Tech Stack |
 |--------------|
-| ![Tech Stack](./Screenshot%2025-06-08%160551.png) |
+| ![Tech Stack](Screenshot%202025-06-08%20160551.png) |
 
 | Light Mode |
 |--------------|
-| ![Light Mode](./Screenshot%2025-06-08%160704.png) |
+| ![Light Mode](Screenshot%202025-06-08%20160704.png) |
 
 | Contact |
 |--------------|
-| ![Contact](./Screenshot%2025-06-08%160629.png) |
+| ![Contact](Screenshot%202025-06-08%20160629.png) |
 
 ---
 
