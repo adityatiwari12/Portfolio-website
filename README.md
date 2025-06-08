@@ -60,7 +60,7 @@ This website is my way of being intentional about my growth, impact, and the com
 I'm constantly improving — and your feedback helps!
 
 Whether it's UI suggestions, accessibility tips, performance insights, or just a vibe check —  
-**[Open an Issue](https://github.com/your-username/your-repo-name/issues)** or connect with me on [LinkedIn](https://www.linkedin.com/in/aditya-tiwari).
+**[Open an Issue](https://github.com/adityatiwari12/Portfolio-website/issues)** or connect with me on [LinkedIn](https://www.linkedin.com/in/adityatiwari08/).
 
 ---
 
