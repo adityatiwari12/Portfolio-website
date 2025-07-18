@@ -8,6 +8,7 @@ import Projects from "@/components/projects"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
+import GitHubStats from "@/components/github-stats"
 
 export const metadata: Metadata = {
   title: "Aditya Tiwari | Portfolio",
@@ -25,6 +26,7 @@ export default function Home() {
         <Experience />
         <Research />
         <Projects />
+        <GitHubStats />
         <Contact />
       </main>
       <Footer />

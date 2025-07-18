@@ -38,7 +38,7 @@ export default function Experience() {
       title: "International Service Director (ISD)",
       organization: "Rotaract Club of Acropolis Royals",
       type: "Internship",
-      duration: "Aug 2024 - Present",
+      duration: "Aug 2024 - Aug 2025",
       location: "Indore, India",
       description:
         "Fostering international collaborations, organizing cultural exchanges, and leading service projects. Coordinating letterhead and flag exchanges while building global connections with Rotaract clubs worldwide.",

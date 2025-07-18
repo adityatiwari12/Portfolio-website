@@ -39,8 +39,7 @@ export default function About() {
           >
             <h3 className="text-2xl font-bold mb-4">Innovation & Leadership</h3>
             <p className="text-muted-foreground mb-6">
-              I am Aditya Tiwari, a second-year B.Tech student passionate about innovation, sustainability, and
-              leadership. My academic journey focuses on leveraging technology to drive impactful change.
+              I am Aditya Tiwari, a third-year B.Tech student passionate about innovation, sustainability, and leadership. My academic journey focuses on leveraging technology to drive impactful change.
             </p>
             <p className="text-muted-foreground mb-6">
               My interests span technology, literature, and the arts. I actively participate in multiple college clubs,
